@@ -17,7 +17,6 @@ public class Enemy extends LivingThing{
      */
     public Enemy (String name, int maximumHP, int attack) {
         super(name, maximumHP, attack);
-        setDead(false);
     }
 
     /**
@@ -30,6 +29,7 @@ public class Enemy extends LivingThing{
         super.wounded(damage);
         if(isDead()) {
             System.out.printf("モンスター%sは倒れた。\n", getName());
+            
         }
     }
 }
